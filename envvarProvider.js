@@ -33,7 +33,7 @@ const provider = {
         let envvars = Object.entries(process.env);
 
         if (projectDir && isDotenvInDeps(projectDir)) {
-            const fileContent = fs.readFileSync(`${projectDir}/.env.local`, { encoding: 'utf8' });
+            const fileContent = fs.readFileSync(`${projectDir}/.env.development`, { encoding: 'utf8' });
             fileContent
                 .split(EOL)
                 // filter out comments
